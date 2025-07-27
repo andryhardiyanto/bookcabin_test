@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bookcabin-be:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file: ".env"
+    volumes:
+      - ./data:/app/data
+
+
+  
