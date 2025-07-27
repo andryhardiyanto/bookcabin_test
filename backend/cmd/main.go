@@ -26,16 +26,10 @@ func main() {
 	}
 	defer logger.Sync()
 
-	logger.Info("Starting BookCabin Backend",
-		zap.String("app_name", config.Cfg.AppName),
-		zap.String("env", config.Cfg.Env),
-		zap.String("port", config.Cfg.AppPort))
-
 	db, err := db.NewSqlLite()
 	if err != nil {
 		logger.Fatal("Failed to initialize database", zap.Error(err))
 	}
-	logger.Info("Database initialized successfully")
 
 	validator, err := validators.NewValidator()
 	if err != nil {
