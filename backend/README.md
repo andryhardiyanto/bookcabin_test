@@ -40,6 +40,8 @@ A Go-based REST API service for managing airline crew vouchers and seat assignme
    ```bash
    mkdir -p data
    ```
+   
+   **Note:** The `vouchers.db` file will be automatically created inside the `data` folder when you first run the application.
 
 3. **Run the application**
    ```bash
